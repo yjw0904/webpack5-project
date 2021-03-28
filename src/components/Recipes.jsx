@@ -15,7 +15,7 @@ const elvenGauntletsRecipee ={
 console.log(elvenShieldRecipe)
 console.log(elvenGauntletsRecipee)
 
-const Recipes = () => {
+export const Recipes = () => {
   const [recipe, setRecipe] = useState({})
   return (
     <div>
@@ -33,4 +33,3 @@ const Recipes = () => {
     </div>    
   )
 }
-export default Recipes
