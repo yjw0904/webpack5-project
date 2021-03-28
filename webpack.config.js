@@ -1,5 +1,5 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
@@ -30,18 +30,18 @@ module.exports ={
         //   },
         // },
       },
-      {
-        test: /\.(s[ac]|c)ss$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: '' },
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ],
-      },
+      // {
+      //   test: /\.(s[ac]|c)ss$/i,
+      //   use: [
+      //     {
+      //       loader: MiniCssExtractPlugin.loader,
+      //       options: { publicPath: '' },
+      //     },
+      //     'css-loader',
+      //     'postcss-loader',
+      //     'sass-loader'
+      //   ],
+      // },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -54,7 +54,7 @@ module.exports ={
 
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
+    // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     })
