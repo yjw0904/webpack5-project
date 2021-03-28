@@ -1,6 +1,7 @@
+import React from 'react'
 import { Recipes } from './Recipes'
 import sword from '../images/swc-sword.png'
-import swordSvg from '../images/sword.svg'
+// import swordSvg from '../images/sword.svg'
 
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
