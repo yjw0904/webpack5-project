@@ -1,0 +1,3 @@
+export const ACTIONS = {
+  SET_HOME_PAGE_DATA: 'SET_HOME_PAGE_DATA',
+}
