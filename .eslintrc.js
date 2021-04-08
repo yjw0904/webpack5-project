@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: { indent: ['error', 2] },
+  rules: { indent: [2, 2, { SwitchCase: 1 }] },
   settings: { version: 'detect' },
 }
 // module.exports = {
