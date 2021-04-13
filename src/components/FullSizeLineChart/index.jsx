@@ -1,51 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import _ from 'lodash'
 import "regenerator-runtime/runtime.js"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-
-const data = [
-  {
-    name: '2021-03-26',
-    IBM: 136.38,
-    AAPL: 121.21,
-    AMZN: 618.71,
-  },
-  {
-    name: '2021-03-25',
-    IBM: 133.07,
-    AAPL: 120.59,
-    AMZN: 640.39,
-  },
-  {
-    name: '2021-03-24',
-    IBM: 130.62,
-    AAPL: 120.09,
-    AMZN: 630.27,
-  },
-  {
-    name: '2021-03-23',
-    IBM: 130.46,
-    AAPL: 122.54,
-    AMZN: 662.160,
-  },
-  {
-    name: '2021-03-22',
-    IBM: 130.55,
-    AAPL: 123.39,
-    AMZN: 670.00,
-  },
-  {
-    name: '2021-03-19',
-    IBM: 128.90,
-    AAPL: 119.99,
-    amt: 2500,
-  },
-  {
-    name: '2021-03-18',
-    IBM: 130.06,
-    AAPL: 120.53,
-    AMZN: 654.87,
-  },
-];
 
 export const FullSizeLineChart = () => {  
   
@@ -74,11 +31,14 @@ export const FullSizeLineChart = () => {
 
   stockData()
 
+  const chartData = useSelector((state) =>
+    _.get(state.data.homePage, 'data', []),
+  )  
   
   return (
     <ResponsiveContainer width='100%' height={300}>
       <LineChart        
-        data={data}
+        data={chartData}
         fontSize={14}
         margin={{
           top: 30,
