@@ -1,0 +1,3 @@
+export const ACTIONS = {
+  FETCH_HOME_PAGE_DATA: 'FETCH_HOME_PAGE_DATA',
+}
