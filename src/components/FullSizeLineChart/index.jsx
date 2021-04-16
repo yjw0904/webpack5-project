@@ -4,33 +4,8 @@ import _ from 'lodash'
 import "regenerator-runtime/runtime.js"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
-export const FullSizeLineChart = () => {  
+export const FullSizeLineChart = () => {    
   
-  const fetchData = async () => {
-    const requestOption = {
-      method: "GET",
-      redirect: "follow"
-    }
-
-    const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&apikey=PXZ3MEP7FYF4WULC`
-
-    try {
-      const response = await fetch(apiUrl, requestOption);
-      return response.ok ? response.text() : null
-    }
-    catch (err) {
-      console.log(err)
-      return null
-    }
-  }
-
-  const stockData = async () => {
-    let apiValue = await fetchData()
-    console.log(JSON.parse(apiValue))    
-  }
-
-  stockData()
-
   const chartData = useSelector((state) =>
     _.get(state.data.homePage, 'data', []),
   )  
