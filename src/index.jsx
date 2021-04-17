@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { App } from './components/App'
+import { App } from './App'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'

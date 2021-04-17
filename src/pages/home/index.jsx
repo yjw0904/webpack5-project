@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 
-import { Tile } from './Tile'
-import { FullSizeLineChart } from './FullSizeLineChart'
+import { Tile } from '../../components/Tile'
+import { FullSizeLineChart } from '../../components/FullSizeLineChart'
 
-import { fetchHomePageData } from '../sagas/home_page/actions'
+import { fetchHomePageData } from '../../sagas/home_page/actions'
 
-export const App = () => {
+export const HomePage = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {

@@ -4,11 +4,22 @@ import _ from 'lodash'
 import "regenerator-runtime/runtime.js"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
-export const FullSizeLineChart = () => {    
+
+export const FullSizeLineChart = () => {
   
   const chartData = useSelector((state) =>
     _.get(state.data.homePage, 'data', []),
-  )  
+  )
+
+  const CustomTooltip = ( active, payload, label, data ) => {
+    console.log(data)
+    return (
+      <div className="custom-tooltip">
+        <p className="label">{`${label} : ${payload[0]}`}</p>
+        <p>hahah</p>
+      </div>
+    )    
+  }
   
   return (
     <ResponsiveContainer width='100%' height={300}>
@@ -30,7 +41,7 @@ export const FullSizeLineChart = () => {
           tickLine={false}
         />
         <YAxis axisLine={false} type="number" domain={[110, 140]} />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
         <Legend />
         <Line type="monotone" dataKey="IBM" stroke="#8884d8" />
         <Line type="monotone" dataKey="AAPL" stroke="#82ca9d" />
