@@ -1,8 +1,7 @@
 import React from 'react'
-//import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
-//import _ from 'lodash'
+
 // Mui components
 import Grid from '@material-ui/core/Grid'
 // Components
