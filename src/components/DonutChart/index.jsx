@@ -17,7 +17,7 @@ export const DonutChart = ( {chartData} ) => {
    
   return (    
     <Grid container>
-      <Grid item xs={6} >
+      <Grid item xs={12} sm={8}>
         <ResponsiveContainer width='100%' height={400}>
           <PieChart width={800} height={400}>
             <Pie
@@ -41,7 +41,7 @@ export const DonutChart = ( {chartData} ) => {
           </PieChart>
         </ResponsiveContainer>
       </Grid>
-      <Grid item xs={6} className={classes.chartContainer}>
+      <Grid item xs={12} sm={4} className={classes.chartContainer}>
         <Legend
           chartData={chartData}
           chartColor={SEVERIITY_COLORS}
