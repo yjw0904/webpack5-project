@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 
 import { Tile } from '../../components/Tile'
-import { FullSizeLineChart } from '../../components/FullSizeLineChart'
+import { LeadingTechStocksLineChart } from './components/LeadingTechStocksLineChart'
 import { AssetAllocationDonutChart } from './components/AssetAllocationDonutChart'
 import { fetchHomePageData } from '../../sagas/home_page/actions'
 
@@ -25,9 +25,9 @@ export const HomePage = () => {
         justify="center"
       >
         <Grid item xs={12}>
-          <Tile title='My Personal Webiste'>
+          <Tile title='Leading Tech Stocks'>
             <Grid item xs={12} >
-              <FullSizeLineChart />
+              <LeadingTechStocksLineChart />
             </Grid>
           </Tile>
         </Grid>
