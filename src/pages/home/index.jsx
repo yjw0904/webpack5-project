@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container'
 import { Tile } from '../../components/Tile'
 import { LeadingTechStocksLineChart } from './components/LeadingTechStocksLineChart'
 import { AssetAllocationDonutChart } from './components/AssetAllocationDonutChart'
+import { InvestmentRateOfReturnTile } from './components/InvestmentRateOfReturnTile'
 import { fetchHomePageData } from '../../sagas/home_page/actions'
 
 export const HomePage = () => {
@@ -32,12 +33,19 @@ export const HomePage = () => {
           </Tile>
         </Grid>
         <Grid item xs={12}>
+          <Tile title='Balance History'>
+            <Grid item xs={12}>
+              <InvestmentRateOfReturnTile />
+            </Grid>
+          </Tile>
+        </Grid>
+        <Grid item xs={12}>
           <Tile title='Asset Allocation'>
             <Grid item xs={12} >
               <AssetAllocationDonutChart />
             </Grid>
           </Tile>
-        </Grid>
+        </Grid>        
       </Grid>
     </Container>
   )
