@@ -4,8 +4,11 @@ import PropTypes from 'prop-types'
 import "regenerator-runtime/runtime.js"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
-
-export const FullSizeLineChart = ({chartData, seriesProps, xDataKey, xTooltipName}) => {
+/**
+ * Stock Line Chart 
+ * Supports multiple lines 
+ */
+export const StockLineChart = ({chartData, seriesProps, xDataKey, xTooltipName}) => {
     
   const lineGraph = seriesProps.map((series, index) => {
     return (      
@@ -67,20 +70,20 @@ export const FullSizeLineChart = ({chartData, seriesProps, xDataKey, xTooltipNam
       >
         <CartesianGrid stroke='#767676' vertical={false} />
         <XAxis 
-          dataKey="name"
+          dataKey="date"
+          tick={false}
           axisLine={false}
           stroke='#DBDBDB'
           tickLine={false}
         />
-        <YAxis axisLine={false} type="number" domain={[110, 140]} />
+        <YAxis axisLine={false} type="number" domain={['dataMin', 'dataMax']} />
         <Tooltip
           content={customTooltip}
           contentStyle={{ backgroundColor: '#4A4A4A' }}
           position={{ x: 50, y: 290 }}          
         />
         <Legend
-          verticalAlign='top'
-          align='left'
+          verticalAlign='top'          
           height={24}
           margin={{ left: 50, bottom: 50}}
         />
@@ -90,7 +93,7 @@ export const FullSizeLineChart = ({chartData, seriesProps, xDataKey, xTooltipNam
   )
 }
 
-FullSizeLineChart.propTypes = {
+StockLineChart.propTypes = {
   seriesProps: PropTypes.arrayOf(
     PropTypes.shape({
       dataKey: PropTypes.string.isRequired,
