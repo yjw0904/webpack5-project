@@ -15,3 +15,7 @@ export const formatNumberNoDecimal = (value) => {
 export const formatDateMMMDYYYY = (timeStamp) => {
   return moment(timeStamp, 'YYYY-MM-DDTHH:mm:ss').format('MMM D, YYYY')
 }
+
+export const formatDateMDD = (xData) => {
+  return moment(xData, 'YYYY-MM-DDTHH:mm:ss').format('M/DD')
+}
