@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles(() => ({
   alertTrendUp: {
-    color: 'red',
+    color: 'green',
   },
   alertTrendDown: {
-    color: 'green',
+    color: 'red',
   },
 }))
