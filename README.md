@@ -1,13 +1,6 @@
 Introduction
 This is the micro app I created to demonstrate knowledge and experience.
-Major frameworks/libraries include:
-Express
-Webpack
-React
-Redux
-Redux
-Sagas
-Material-UI
+Major frameworks/libraries include: Webpack,React,Redux,Redux,Sagas,Rechart, and Material-UI
 
 Get Started
 Make sure to run on Node version 14.4.0. If Node Version Manager is installed, ensure version 14.4.0 is installed and run nvm use which will run off of the nvm config file .nvmrc.
